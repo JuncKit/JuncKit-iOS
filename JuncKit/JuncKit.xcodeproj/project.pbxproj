@@ -51,10 +51,10 @@
 		B8F9D9712A8FCA5A006A454F /* JuncKit */ = {
 			isa = PBXGroup;
 			children = (
-				B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */,
-				B8F9D9742A8FCA5A006A454F /* ContentView.swift */,
-				B8F9D9762A8FCA5C006A454F /* Assets.xcassets */,
 				B8F9D9782A8FCA5C006A454F /* Preview Content */,
+				B8F9D9822A8FCB64006A454F /* App */,
+				B8F9D9812A8FCB5B006A454F /* Resources */,
+				B8F9D9802A8FCB54006A454F /* View */,
 			);
 			path = JuncKit;
 			sourceTree = "<group>";
@@ -65,6 +65,30 @@
 				B8F9D9792A8FCA5C006A454F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B8F9D9802A8FCB54006A454F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B8F9D9742A8FCA5A006A454F /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B8F9D9812A8FCB5B006A454F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B8F9D9762A8FCA5C006A454F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B8F9D9822A8FCB64006A454F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
