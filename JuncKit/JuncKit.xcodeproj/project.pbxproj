@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B8813D4D2A8FFA28006EF570 /* AppleSigninButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D4C2A8FFA28006EF570 /* AppleSigninButton.swift */; };
+		B8813D4F2A8FFB58006EF570 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D4E2A8FFB58006EF570 /* ContentView.swift */; };
 		B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */; };
 		B8F9D9752A8FCA5A006A454F /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9D9742A8FCA5A006A454F /* LogInView.swift */; };
 		B8F9D9772A8FCA5C006A454F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9762A8FCA5C006A454F /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* Begin PBXFileReference section */
 		B8813D4A2A8FF5EA006EF570 /* JuncKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JuncKit.entitlements; sourceTree = "<group>"; };
 		B8813D4C2A8FFA28006EF570 /* AppleSigninButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSigninButton.swift; sourceTree = "<group>"; };
+		B8813D4E2A8FFB58006EF570 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B8F9D96F2A8FCA5A006A454F /* JuncKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuncKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuncKitApp.swift; sourceTree = "<group>"; };
 		B8F9D9742A8FCA5A006A454F /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				B8813D4B2A8FFA17006EF570 /* LogIn */,
+				B8813D4E2A8FFB58006EF570 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			files = (
 				B8F9D9752A8FCA5A006A454F /* LogInView.swift in Sources */,
 				B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */,
+				B8813D4F2A8FFB58006EF570 /* ContentView.swift in Sources */,
 				B8813D4D2A8FFA28006EF570 /* AppleSigninButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
