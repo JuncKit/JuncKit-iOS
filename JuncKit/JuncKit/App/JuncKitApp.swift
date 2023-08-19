@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct JuncKitApp: App {
-    var body: some Scene {
-        WindowGroup {
-            AppleLogInView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      OnboardingView()
     }
+  }
 }
