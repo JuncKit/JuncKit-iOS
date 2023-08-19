@@ -11,7 +11,9 @@ struct GetCallView: View {
   @State var callstate = "Pending Call"
   @State var distance = 5
   @State var min = 3
-  @State var address = "Busan\nMetropolitan City,\nGijang County"
+  @State var centerName = "Hoeryong Village\nCommunity Center"
+  @State var address = "8 Baesan-ro, Gijang-gun,\nBusan Metropolitan City"
+  @State var isShowingDestinationInfoView = false
   
   @Binding var isShowingGetCallView: Bool
   
@@ -26,37 +28,46 @@ struct GetCallView: View {
             .padding(.bottom, 78)
           Spacer()
         }
+        .padding([.leading], 24)
         ZStack {
           Image("callFrame")
           VStack {
             HStack(spacing: 12) {
               Text("\(distance)km")
                 .font(.system(size: 24))
-                .foregroundColor(.green.opacity(0.6))
-                .padding(8.0)
+                .foregroundColor(.mainGreen)
+                .padding([.top, .bottom], 4)
+                .padding([.leading, .trailing], 12)
                 .background(
                   RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.green, lineWidth: 2)
+                    .stroke(Color.mainGreen, lineWidth: 1)
                 )
               
               Text("\(min)mins")
                 .font(.system(size: 24))
-                .foregroundColor(.green.opacity(0.6))
-                .padding(8.0)
+                .foregroundColor(.mainGreen)
+                .padding([.top, .bottom], 4)
+                .padding([.leading, .trailing], 12)
                 .background(
                   RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.green, lineWidth: 2)
+                    .stroke(Color.mainGreen, lineWidth: 1)
                 )
-            }.padding(.bottom, 36)
-            Text("\(address)")
+            }
+            .padding(.bottom, 28)
+            Text("\(centerName)")
               .font(.system(size: 32))
+              .multilineTextAlignment(.center)
+              .padding(.bottom, 16)
+            Text("\(address)")
+              .font(.system(size: 24))
+              .foregroundColor(.black.opacity(0.4))
               .multilineTextAlignment(.center)
           }
           .padding([.leading, .trailing], 32)
         }
         Spacer()
         Button {
-          
+          isShowingDestinationInfoView.toggle()
         } label: {
           Text("Get the call")
             .font(.system(size: 28, weight: .semibold))
@@ -73,7 +84,10 @@ struct GetCallView: View {
         }
         .padding(.bottom, 38)
       }
-      .padding([.leading, .trailing], 24)
+
+    }
+    if (isShowingDestinationInfoView) {
+      DestinationInfoView()
     }
   }
 }

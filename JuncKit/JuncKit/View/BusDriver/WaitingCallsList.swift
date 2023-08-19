@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct WaitingCallsList: View {
-  @State private var isShowingWaitingCallView = false
-  @State private var waitingCallList = ["8 Baesan-ro, Gijang-gun", "8 Baesan-ro, Gijang-gun", "8 Baesan-ro, Gijang-gun", "8 Baesan-ro, Gijang-gun", "8 Baesan-ro, Gijang-gun", "8 Baesan-ro, Gijang-gun", "8 Baesan-ro, Gijang-gun", "8 Baesan-ro, Gijang-gun"]
-  private var count = 0
+  @State var isShowingWaitingCallView = false
+  @State var waitingCallList = ["8 Baesan-ro, Gijang-gun", "8 Baesan-ro, Gijang-gun", "8 Baesan-ro, Gijang-gun", "8 Baesan-ro, Gijang-gun", "8 Baesan-ro, Gijang-gun", "8 Baesan-ro, Gijang-gun", "8 Baesan-ro, Gijang-gun", "8 Baesan-ro, Gijang-gun"]
+  var count = 0
+  
+  @State var isShowingGetCallView = false
+  @Binding var isShowingCallList: Bool
   
     var body: some View {
       ZStack {
@@ -29,7 +32,7 @@ struct WaitingCallsList: View {
               ForEach(0..<waitingCallList.count, id: \.self) { index in
                 HStack(spacing: 0) {
                   Button {
-                    // action
+                    isShowingGetCallView.toggle()
                   } label: {
                     Text("\(index+1)")
                       .font(.system(size: 16))
@@ -53,7 +56,8 @@ struct WaitingCallsList: View {
           }
           HStack {
             Button {
-              isShowingWaitingCallView.toggle()
+              isShowingCallList.toggle()
+              
             } label: {
               Image("backButton")
             }
@@ -62,10 +66,12 @@ struct WaitingCallsList: View {
             Spacer()
           }
         }
-        .padding([.leading, .trailing], 24)
         if (isShowingWaitingCallView) {
           WaitingCallView(isShowingWaitingCallView: $isShowingWaitingCallView)
             .padding([.leading], 24)
+        }
+        if (isShowingGetCallView) {
+          GetCallView(isShowingGetCallView: $isShowingGetCallView)
         }
       }
     }
@@ -73,6 +79,6 @@ struct WaitingCallsList: View {
 
 struct WaitingCallsList_Previews: PreviewProvider {
     static var previews: some View {
-        WaitingCallsList()
+      WaitingCallsList( isShowingCallList: .constant(true))
     }
 }

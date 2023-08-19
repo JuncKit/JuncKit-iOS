@@ -21,14 +21,4 @@ struct MainButtonStyle: ButtonStyle {
         .fill(Color.mainGreen)
         .padding([.leading, .trailing], 25))
   }
-  
-  //         configuration.label
-//    .font(.system(size: fontSize, weight: .bold))
-//    .foregroundColor(.white)
-//    .padding()
-//    .frame(minWidth: 0, maxWidth: .infinity)
-//    .foregroundColor(.white)
-//    .background(RoundedRectangle(cornerRadius: 12.0).fill(Color.bunnyColor)
-//
-//    )
 }

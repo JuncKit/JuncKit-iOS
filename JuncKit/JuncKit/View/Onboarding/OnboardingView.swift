@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct OnboardingView: View {
+  @State var isShowingCallList = false
+  
   var body: some View {
     NavigationView {
       VStack {
@@ -32,7 +34,7 @@ struct OnboardingView: View {
           Button {
             // 탑승자 모드
           } label: {
-            NavigationLink(destination: WaitingCallsList()) {
+            NavigationLink(destination: WaitingCallsList(isShowingCallList: $isShowingCallList), isActive: $isShowingCallList) {
               Text("Driver Mode")
             }
           }
