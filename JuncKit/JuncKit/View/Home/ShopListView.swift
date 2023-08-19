@@ -25,7 +25,7 @@ struct ShopListView: View {
 }
 
 extension ShopListView {
-  private func getShopList() {
+  private func getShopList() { // responseJSON -> responseString
     AF.request(APIEnvironment.serverUrl+"/demo").responseString() { response in
       switch response.result {
       case .success:
