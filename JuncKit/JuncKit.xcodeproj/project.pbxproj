@@ -26,6 +26,9 @@
 		B8A0EAC52A9139880011479A /* DestinationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0EAC42A9139880011479A /* DestinationInfoView.swift */; };
 		B8A0EAC72A9150DD0011479A /* HalfSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0EAC62A9150DD0011479A /* HalfSheet.swift */; };
 		B8A0EACA2A91510C0011479A /* HalfSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0EAC92A91510C0011479A /* HalfSheetController.swift */; };
+		B8A0EAD22A915F250011479A /* LoadingAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = B8A0EAD02A915F250011479A /* LoadingAnimation.json */; };
+		B8A0EAD32A915F250011479A /* Bus.json in Resources */ = {isa = PBXBuildFile; fileRef = B8A0EAD12A915F250011479A /* Bus.json */; };
+		B8A0EAD62A915F920011479A /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0EAD52A915F920011479A /* LottieView.swift */; };
 		B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */; };
 		B8F9D9772A8FCA5C006A454F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9762A8FCA5C006A454F /* Assets.xcassets */; };
 		B8F9D97A2A8FCA5C006A454F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9792A8FCA5C006A454F /* Preview Assets.xcassets */; };
@@ -54,6 +57,9 @@
 		B8A0EAC42A9139880011479A /* DestinationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationInfoView.swift; sourceTree = "<group>"; };
 		B8A0EAC62A9150DD0011479A /* HalfSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSheet.swift; sourceTree = "<group>"; };
 		B8A0EAC92A91510C0011479A /* HalfSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSheetController.swift; sourceTree = "<group>"; };
+		B8A0EAD02A915F250011479A /* LoadingAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LoadingAnimation.json; sourceTree = "<group>"; };
+		B8A0EAD12A915F250011479A /* Bus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Bus.json; sourceTree = "<group>"; };
+		B8A0EAD52A915F920011479A /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		B8F9D96F2A8FCA5A006A454F /* JuncKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuncKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuncKitApp.swift; sourceTree = "<group>"; };
 		B8F9D9762A8FCA5C006A454F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,8 +109,6 @@
 		B8813D562A9031FE006EF570 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B8A0EAC82A9151000011479A /* HalfSheet */,
-				B8813D742A90BF05006EF570 /* ButtonComponent.swift */,
 				B8813D762A90C036006EF570 /* Color+Extension.swift */,
 			);
 			path = Extensions;
@@ -152,6 +156,7 @@
 		B8A0EABF2A9114C40011479A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B8A0EACE2A915EFC0011479A /* Components */,
 				B8A0EAC02A9114CF0011479A /* LocationManager.swift */,
 			);
 			path = Utils;
@@ -164,6 +169,32 @@
 				B8A0EAC92A91510C0011479A /* HalfSheetController.swift */,
 			);
 			path = HalfSheet;
+			sourceTree = "<group>";
+		};
+		B8A0EACE2A915EFC0011479A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B8813D742A90BF05006EF570 /* ButtonComponent.swift */,
+				B8A0EAC82A9151000011479A /* HalfSheet */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B8A0EACF2A915F140011479A /* Lotties */ = {
+			isa = PBXGroup;
+			children = (
+				B8A0EAD12A915F250011479A /* Bus.json */,
+				B8A0EAD02A915F250011479A /* LoadingAnimation.json */,
+			);
+			path = Lotties;
+			sourceTree = "<group>";
+		};
+		B8A0EAD42A915F860011479A /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				B8A0EAD52A915F920011479A /* LottieView.swift */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 		B8F9D9662A8FCA5A006A454F = {
@@ -211,6 +242,7 @@
 		B8F9D9802A8FCB54006A454F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B8A0EAD42A915F860011479A /* Lottie */,
 				B8813D6B2A90B54D006EF570 /* BusDriver */,
 				B8813D682A90AF59006EF570 /* Passenger */,
 				B8813D652A90AD5F006EF570 /* Onboarding */,
@@ -221,6 +253,7 @@
 		B8F9D9812A8FCB5B006A454F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B8A0EACF2A915F140011479A /* Lotties */,
 				B8F9D9762A8FCA5C006A454F /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -294,7 +327,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8A0EAD32A915F250011479A /* Bus.json in Resources */,
 				B8813D642A90AD4D006EF570 /* Launch Screen.storyboard in Resources */,
+				B8A0EAD22A915F250011479A /* LoadingAnimation.json in Resources */,
 				B8F9D97A2A8FCA5C006A454F /* Preview Assets.xcassets in Resources */,
 				B8F9D9772A8FCA5C006A454F /* Assets.xcassets in Resources */,
 			);
@@ -350,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8813D672A90AD8E006EF570 /* OnboardingView.swift in Sources */,
+				B8A0EAD62A915F920011479A /* LottieView.swift in Sources */,
 				B8813D772A90C036006EF570 /* Color+Extension.swift in Sources */,
 				B8A0EAC12A9114CF0011479A /* LocationManager.swift in Sources */,
 				B8A0EAC72A9150DD0011479A /* HalfSheet.swift in Sources */,

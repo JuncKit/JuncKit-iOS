@@ -23,7 +23,7 @@ struct WaitingBusView: View {
           Image("connectingBkg")
         }
       case .success:
-        Image("JunckitBus")
+        LottieView(jsonName: "Bus")
       default:
         Color.white
       }

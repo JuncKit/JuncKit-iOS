@@ -38,7 +38,7 @@ struct WaitingBusTextView: View {
       Text("The driver's\ngoing to arrive in\n\(min)mins.")
         .font(.system(size: 36, weight: .semibold))
         .onAppear {
-          DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+          DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             waitingBusState = .complete
           }
         }
