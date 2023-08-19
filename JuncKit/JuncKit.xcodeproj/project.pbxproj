@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5253FD6D4DDC6EC19E1331FC /* Pods_JuncKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAEE8CA5611110381F4B2E6 /* Pods_JuncKit.framework */; };
 		B8813D582A903213006EF570 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D572A903213006EF570 /* APIEnvironment.swift */; };
 		B8813D642A90AD4D006EF570 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8813D632A90AD4D006EF570 /* Launch Screen.storyboard */; };
 		B8813D672A90AD8E006EF570 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D662A90AD8E006EF570 /* OnboardingView.swift */; };
@@ -20,12 +21,15 @@
 		B8813D7B2A90E6AE006EF570 /* WaitingCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D7A2A90E6AE006EF570 /* WaitingCallView.swift */; };
 		B8813D7D2A90E820006EF570 /* GetCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D7C2A90E820006EF570 /* GetCallView.swift */; };
 		B8813D7F2A90ED9B006EF570 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D7E2A90ED9B006EF570 /* WebSocket.swift */; };
+		B8813D822A90F86D006EF570 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D812A90F86D006EF570 /* Client.swift */; };
 		B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */; };
 		B8F9D9772A8FCA5C006A454F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9762A8FCA5C006A454F /* Assets.xcassets */; };
 		B8F9D97A2A8FCA5C006A454F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9792A8FCA5C006A454F /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8DAEE8CA5611110381F4B2E6 /* Pods_JuncKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuncKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFC34F82DE2CAF5CF88D7262 /* Pods-JuncKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuncKit.release.xcconfig"; path = "Target Support Files/Pods-JuncKit/Pods-JuncKit.release.xcconfig"; sourceTree = "<group>"; };
 		B8813D4A2A8FF5EA006EF570 /* JuncKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JuncKit.entitlements; sourceTree = "<group>"; };
 		B8813D552A903182006EF570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B8813D572A903213006EF570 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
@@ -41,10 +45,12 @@
 		B8813D7A2A90E6AE006EF570 /* WaitingCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingCallView.swift; sourceTree = "<group>"; };
 		B8813D7C2A90E820006EF570 /* GetCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCallView.swift; sourceTree = "<group>"; };
 		B8813D7E2A90ED9B006EF570 /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		B8813D812A90F86D006EF570 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		B8F9D96F2A8FCA5A006A454F /* JuncKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuncKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuncKitApp.swift; sourceTree = "<group>"; };
 		B8F9D9762A8FCA5C006A454F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8F9D9792A8FCA5C006A454F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DDCB150B43496470DD95FF22 /* Pods-JuncKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuncKit.debug.xcconfig"; path = "Target Support Files/Pods-JuncKit/Pods-JuncKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,15 +58,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5253FD6D4DDC6EC19E1331FC /* Pods_JuncKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37113784222EC83E20BA932F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DAEE8CA5611110381F4B2E6 /* Pods_JuncKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73332F0B01455A5B36833B6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDCB150B43496470DD95FF22 /* Pods-JuncKit.debug.xcconfig */,
+				AFC34F82DE2CAF5CF88D7262 /* Pods-JuncKit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B8813D512A9005F8006EF570 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B8813D802A90F862006EF570 /* Stomp */,
 				B8813D572A903213006EF570 /* APIEnvironment.swift */,
 				B8813D7E2A90ED9B006EF570 /* WebSocket.swift */,
 			);
@@ -106,11 +131,21 @@
 			path = BusDriver;
 			sourceTree = "<group>";
 		};
+		B8813D802A90F862006EF570 /* Stomp */ = {
+			isa = PBXGroup;
+			children = (
+				B8813D812A90F86D006EF570 /* Client.swift */,
+			);
+			path = Stomp;
+			sourceTree = "<group>";
+		};
 		B8F9D9662A8FCA5A006A454F = {
 			isa = PBXGroup;
 			children = (
 				B8F9D9712A8FCA5A006A454F /* JuncKit */,
 				B8F9D9702A8FCA5A006A454F /* Products */,
+				73332F0B01455A5B36833B6A /* Pods */,
+				37113784222EC83E20BA932F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,17 +213,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8F9D97D2A8FCA5C006A454F /* Build configuration list for PBXNativeTarget "JuncKit" */;
 			buildPhases = (
+				E045DA67B3BF92135F787288 /* [CP] Check Pods Manifest.lock */,
 				B8F9D96B2A8FCA5A006A454F /* Sources */,
 				B8F9D96C2A8FCA5A006A454F /* Frameworks */,
 				B8F9D96D2A8FCA5A006A454F /* Resources */,
+				0A88DE75F91ED5DB374A0E74 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = JuncKit;
-			packageProductDependencies = (
-			);
 			productName = JuncKit;
 			productReference = B8F9D96F2A8FCA5A006A454F /* JuncKit.app */;
 			productType = "com.apple.product-type.application";
@@ -217,8 +252,6 @@
 				Base,
 			);
 			mainGroup = B8F9D9662A8FCA5A006A454F;
-			packageReferences = (
-			);
 			productRefGroup = B8F9D9702A8FCA5A006A454F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -241,6 +274,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A88DE75F91ED5DB374A0E74 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JuncKit/Pods-JuncKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JuncKit/Pods-JuncKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JuncKit/Pods-JuncKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E045DA67B3BF92135F787288 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JuncKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B8F9D96B2A8FCA5A006A454F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -254,6 +329,7 @@
 				B8813D6F2A90B8C4006EF570 /* WaitingBusView.swift in Sources */,
 				B8813D582A903213006EF570 /* APIEnvironment.swift in Sources */,
 				B8813D7D2A90E820006EF570 /* GetCallView.swift in Sources */,
+				B8813D822A90F86D006EF570 /* Client.swift in Sources */,
 				B8813D712A90B93B006EF570 /* WaitingBusTextView.swift in Sources */,
 				B8813D7F2A90ED9B006EF570 /* WebSocket.swift in Sources */,
 				B8813D752A90BF05006EF570 /* ButtonComponent.swift in Sources */,
@@ -381,6 +457,7 @@
 		};
 		B8F9D97E2A8FCA5C006A454F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDCB150B43496470DD95FF22 /* Pods-JuncKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -414,6 +491,7 @@
 		};
 		B8F9D97F2A8FCA5C006A454F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFC34F82DE2CAF5CF88D7262 /* Pods-JuncKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
