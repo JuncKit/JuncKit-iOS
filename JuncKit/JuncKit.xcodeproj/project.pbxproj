@@ -24,6 +24,8 @@
 		B8A0EAC12A9114CF0011479A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0EAC02A9114CF0011479A /* LocationManager.swift */; };
 		B8A0EAC32A9134F70011479A /* WaitingCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0EAC22A9134F70011479A /* WaitingCallView.swift */; };
 		B8A0EAC52A9139880011479A /* DestinationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0EAC42A9139880011479A /* DestinationInfoView.swift */; };
+		B8A0EAC72A9150DD0011479A /* HalfSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0EAC62A9150DD0011479A /* HalfSheet.swift */; };
+		B8A0EACA2A91510C0011479A /* HalfSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0EAC92A91510C0011479A /* HalfSheetController.swift */; };
 		B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */; };
 		B8F9D9772A8FCA5C006A454F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9762A8FCA5C006A454F /* Assets.xcassets */; };
 		B8F9D97A2A8FCA5C006A454F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9792A8FCA5C006A454F /* Preview Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		B8A0EAC02A9114CF0011479A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B8A0EAC22A9134F70011479A /* WaitingCallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingCallView.swift; sourceTree = "<group>"; };
 		B8A0EAC42A9139880011479A /* DestinationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationInfoView.swift; sourceTree = "<group>"; };
+		B8A0EAC62A9150DD0011479A /* HalfSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSheet.swift; sourceTree = "<group>"; };
+		B8A0EAC92A91510C0011479A /* HalfSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSheetController.swift; sourceTree = "<group>"; };
 		B8F9D96F2A8FCA5A006A454F /* JuncKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuncKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuncKitApp.swift; sourceTree = "<group>"; };
 		B8F9D9762A8FCA5C006A454F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 		B8813D562A9031FE006EF570 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B8A0EAC82A9151000011479A /* HalfSheet */,
 				B8813D742A90BF05006EF570 /* ButtonComponent.swift */,
 				B8813D762A90C036006EF570 /* Color+Extension.swift */,
 			);
@@ -150,6 +155,15 @@
 				B8A0EAC02A9114CF0011479A /* LocationManager.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B8A0EAC82A9151000011479A /* HalfSheet */ = {
+			isa = PBXGroup;
+			children = (
+				B8A0EAC62A9150DD0011479A /* HalfSheet.swift */,
+				B8A0EAC92A91510C0011479A /* HalfSheetController.swift */,
+			);
+			path = HalfSheet;
 			sourceTree = "<group>";
 		};
 		B8F9D9662A8FCA5A006A454F = {
@@ -338,6 +352,7 @@
 				B8813D672A90AD8E006EF570 /* OnboardingView.swift in Sources */,
 				B8813D772A90C036006EF570 /* Color+Extension.swift in Sources */,
 				B8A0EAC12A9114CF0011479A /* LocationManager.swift in Sources */,
+				B8A0EAC72A9150DD0011479A /* HalfSheet.swift in Sources */,
 				B8A0EAC32A9134F70011479A /* WaitingCallView.swift in Sources */,
 				B8813D6A2A90AFA6006EF570 /* CallBusView.swift in Sources */,
 				B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */,
@@ -350,6 +365,7 @@
 				B8813D752A90BF05006EF570 /* ButtonComponent.swift in Sources */,
 				B8A0EAC52A9139880011479A /* DestinationInfoView.swift in Sources */,
 				B8813D732A90BDBB006EF570 /* WaitingBusImageView.swift in Sources */,
+				B8A0EACA2A91510C0011479A /* HalfSheetController.swift in Sources */,
 				B8813D792A90E579006EF570 /* WaitingCallsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

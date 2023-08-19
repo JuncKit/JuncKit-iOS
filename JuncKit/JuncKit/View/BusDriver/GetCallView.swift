@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct GetCallView: View {
   @State var callstate = "Pending Call"
@@ -14,81 +15,87 @@ struct GetCallView: View {
   @State var centerName = "Hoeryong Village\nCommunity Center"
   @State var address = "8 Baesan-ro, Gijang-gun,\nBusan Metropolitan City"
   @State var isShowingDestinationInfoView = false
+  @State var isShowingHalfSheet = true
+  
+  @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.2335, longitude: 129.1600), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
   
   @Binding var isShowingGetCallView: Bool
   
+  var getCallAnnotations: [MyAnnotationItem] = [MyAnnotationItem(coordinate: CLLocationCoordinate2D(latitude: 35.2348, longitude: 129.1591))]
+  
   var body: some View {
     ZStack {
-      Color.white
+      Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: getCallAnnotations, annotationContent: { item in
+        MapAnnotation(coordinate: item.coordinate) {
+                  Image("annotation")
+        }
+      })
+      .ignoresSafeArea()
       VStack(spacing: 0) {
+
         HStack {
-          Text("\(callstate)")
-            .font(.system(size: 36, weight: .semibold))
-            .padding(.top, 56)
-            .padding(.bottom, 78)
+          Button {
+            // back
+          } label: {
+            Image("arrowBackButton")
+          }
+          .padding([.top], 24)
           Spacer()
         }
         .padding([.leading], 24)
-        ZStack {
-          Image("callFrame")
-          VStack {
-            HStack(spacing: 12) {
-              Text("\(distance)km")
-                .font(.system(size: 24))
-                .foregroundColor(.mainGreen)
-                .padding([.top, .bottom], 4)
-                .padding([.leading, .trailing], 12)
-                .background(
-                  RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.mainGreen, lineWidth: 1)
-                )
-              
-              Text("\(min)mins")
-                .font(.system(size: 24))
-                .foregroundColor(.mainGreen)
-                .padding([.top, .bottom], 4)
-                .padding([.leading, .trailing], 12)
-                .background(
-                  RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.mainGreen, lineWidth: 1)
-                )
-            }
-            .padding(.bottom, 28)
-            Text("\(centerName)")
-              .font(.system(size: 32))
-              .multilineTextAlignment(.center)
-              .padding(.bottom, 16)
-            Text("\(address)")
-              .font(.system(size: 24))
-              .foregroundColor(.black.opacity(0.4))
-              .multilineTextAlignment(.center)
-          }
-          .padding([.leading, .trailing], 32)
-        }
         Spacer()
-        Button {
-          isShowingDestinationInfoView.toggle()
-        } label: {
-          Text("Get the call")
-            .font(.system(size: 28, weight: .semibold))
-        }
-        .buttonStyle(MainButtonStyle())
-        .padding(.bottom, 24)
-        Button {
-          isShowingGetCallView.toggle()
-        } label: {
-          Text("Skip")
-            .font(.system(size: 24))
-            .foregroundColor(.black.opacity(0.4))
-            .underline()
-        }
-        .padding(.bottom, 38)
       }
+      if (isShowingDestinationInfoView) {
+        DestinationInfoView()
+      }
+    }
+    .sheet(isPresented: $isShowingHalfSheet) {
+       HalfSheet {
+           VStack(spacing: 0) {
+             HStack(spacing: 12) {
+               Text("\(distance)km")
+                 .font(.system(size: 24))
+                 .foregroundColor(.mainGreen)
+                 .padding([.top, .bottom], 4)
+                 .padding([.leading, .trailing], 12)
+                 .background(
+                   RoundedRectangle(cornerRadius: 20)
+                     .stroke(Color.mainGreen, lineWidth: 1)
+                 )
+               Text("\(min)mins")
+                 .font(.system(size: 24))
+                 .foregroundColor(.mainGreen)
+                 .padding([.top, .bottom], 4)
+                 .padding([.leading, .trailing], 12)
+                 .background(
+                   RoundedRectangle(cornerRadius: 20)
+                     .stroke(Color.mainGreen, lineWidth: 1)
+                 )
+             }
+             .padding(.top, 41)
+             .padding(.bottom, 20)
+             Text("\(centerName)")
+               .font(.system(size: 32))
+               .multilineTextAlignment(.center)
+               .padding(.bottom, 12)
+             Text("\(address)")
+               .font(.system(size: 24))
+               .foregroundColor(.black.opacity(0.4))
+               .multilineTextAlignment(.center)
+           }
+           .padding(.bottom, 29)
+         Button {
+           isShowingDestinationInfoView.toggle()
+           isShowingHalfSheet.toggle()
+         } label: {
+           Text("Get the call")
+             .font(.system(size: 28, weight: .semibold))
+         }
+         .buttonStyle(MainButtonStyle())
+         .padding(.bottom, 20)
+       }
+    }
 
-    }
-    if (isShowingDestinationInfoView) {
-      DestinationInfoView()
-    }
   }
 }
 
