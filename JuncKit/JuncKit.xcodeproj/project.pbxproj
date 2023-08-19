@@ -18,7 +18,6 @@
 		B8813D752A90BF05006EF570 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D742A90BF05006EF570 /* ButtonComponent.swift */; };
 		B8813D772A90C036006EF570 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D762A90C036006EF570 /* Color+Extension.swift */; };
 		B8813D792A90E579006EF570 /* WaitingCallsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D782A90E579006EF570 /* WaitingCallsList.swift */; };
-		B8813D7B2A90E6AE006EF570 /* WaitingCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D7A2A90E6AE006EF570 /* WaitingCallView.swift */; };
 		B8813D7D2A90E820006EF570 /* GetCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D7C2A90E820006EF570 /* GetCallView.swift */; };
 		B8813D7F2A90ED9B006EF570 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D7E2A90ED9B006EF570 /* WebSocket.swift */; };
 		B8813D822A90F86D006EF570 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D812A90F86D006EF570 /* Client.swift */; };
@@ -26,7 +25,6 @@
 		B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */; };
 		B8F9D9772A8FCA5C006A454F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9762A8FCA5C006A454F /* Assets.xcassets */; };
 		B8F9D97A2A8FCA5C006A454F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9792A8FCA5C006A454F /* Preview Assets.xcassets */; };
-		C578B4BFF0F8E1ADCFF41CD3 /* Pods_JuncKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA2CD62CEAA514D42F67F5 /* Pods_JuncKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +42,6 @@
 		B8813D742A90BF05006EF570 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		B8813D762A90C036006EF570 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		B8813D782A90E579006EF570 /* WaitingCallsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingCallsList.swift; sourceTree = "<group>"; };
-		B8813D7A2A90E6AE006EF570 /* WaitingCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingCallView.swift; sourceTree = "<group>"; };
 		B8813D7C2A90E820006EF570 /* GetCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCallView.swift; sourceTree = "<group>"; };
 		B8813D7E2A90ED9B006EF570 /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		B8813D812A90F86D006EF570 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
@@ -128,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				B8813D782A90E579006EF570 /* WaitingCallsList.swift */,
-				B8813D7A2A90E6AE006EF570 /* WaitingCallView.swift */,
 				B8813D7C2A90E820006EF570 /* GetCallView.swift */,
 			);
 			path = BusDriver;
@@ -338,7 +334,6 @@
 				B8A0EAC12A9114CF0011479A /* LocationManager.swift in Sources */,
 				B8813D6A2A90AFA6006EF570 /* CallBusView.swift in Sources */,
 				B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */,
-				B8813D7B2A90E6AE006EF570 /* WaitingCallView.swift in Sources */,
 				B8813D6F2A90B8C4006EF570 /* WaitingBusView.swift in Sources */,
 				B8813D582A903213006EF570 /* APIEnvironment.swift in Sources */,
 				B8813D7D2A90E820006EF570 /* GetCallView.swift in Sources */,

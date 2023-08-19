@@ -19,11 +19,14 @@ struct GetCallView: View {
     ZStack {
       Color.white
       VStack(spacing: 0) {
-        Text("\(callstate)")
-          .font(.system(size: 36))
-          .multilineTextAlignment(.leading)
-          .padding(.top, 97)
-          .padding(.bottom, 24)
+        HStack {
+          Text("\(callstate)")
+            .font(.system(size: 36, weight: .semibold))
+            .padding(.top, 56)
+            .padding(.bottom, 78)
+            .padding(.leading, 24)
+          Spacer()
+        }
         ZStack {
           Image("callFrame")
           VStack {
@@ -33,7 +36,7 @@ struct GetCallView: View {
                       .foregroundColor(.green.opacity(0.6))
                       .padding(8.0)
                       .background(
-                          RoundedRectangle(cornerRadius: 25)
+                          RoundedRectangle(cornerRadius: 20)
                               .stroke(Color.green, lineWidth: 2)
                       )
 
@@ -42,7 +45,7 @@ struct GetCallView: View {
                       .foregroundColor(.green.opacity(0.6))
                       .padding(8.0)
                       .background(
-                          RoundedRectangle(cornerRadius: 25)
+                          RoundedRectangle(cornerRadius: 20)
                               .stroke(Color.green, lineWidth: 2)
                       )
               }.padding(.bottom, 36)
