@@ -11,6 +11,7 @@ struct WaitingBusView: View {
   @State var waitingBusState: WaitingBusState = .connecting
   @State var min = 3
   @Binding var isShowingWaitingBusView: Bool
+  @Binding var isStartPassengerMode: Bool
 
   var body: some View {
     ZStack {
@@ -33,7 +34,7 @@ struct WaitingBusView: View {
           Spacer()
         }
         Spacer()
-        WaitingBusImageView(waitingBusState: $waitingBusState, isShowingWaitingBusView: $isShowingWaitingBusView)
+        WaitingBusImageView(waitingBusState: $waitingBusState, isShowingWaitingBusView: $isShowingWaitingBusView, isStartPassengerMode: $isStartPassengerMode)
       }
       .padding([.leading, .trailing], 24)
     }
@@ -42,6 +43,6 @@ struct WaitingBusView: View {
 
 struct WaitingBusView_Previews: PreviewProvider {
   static var previews: some View {
-    WaitingBusView(isShowingWaitingBusView: .constant(true))
+    WaitingBusView(isShowingWaitingBusView: .constant(true), isStartPassengerMode: .constant(true))
   }
 }

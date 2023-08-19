@@ -11,6 +11,7 @@ enum WaitingBusState {
   case connecting
   case success
   case failure
+  case complete
 }
 
 struct WaitingBusTextView: View {
@@ -36,9 +37,18 @@ struct WaitingBusTextView: View {
     case .success:
       Text("The driver's\ngoing to arrive in\n\(min)mins.")
         .font(.system(size: 36, weight: .semibold))
+        .onAppear {
+          DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            waitingBusState = .complete
+          }
+        }
     case .failure:
       Text("There's no\navailable driver\nright now")
         .font(.system(size: 36, weight: .semibold))
+    case .complete:
+      Text("The driver\nhas arrived!")
+        .font(.system(size: 36, weight: .semibold))
+        .padding(.leading, 24)
     }
   }
 }

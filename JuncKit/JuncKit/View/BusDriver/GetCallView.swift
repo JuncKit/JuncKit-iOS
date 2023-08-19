@@ -35,7 +35,7 @@ struct GetCallView: View {
 
         HStack {
           Button {
-            // back
+            isShowingGetCallView.toggle()
           } label: {
             Image("arrowBackButton")
           }

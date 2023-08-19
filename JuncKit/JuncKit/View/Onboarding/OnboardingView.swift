@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
   @State var isShowingCallList = false
+  @State var isStartPassengerMode = false
   
   var body: some View {
     NavigationView {
@@ -26,7 +27,7 @@ struct OnboardingView: View {
           Button {
             // 탑승자 모드
           } label: {
-            NavigationLink(destination: CallBusView()) {
+            NavigationLink(destination: CallBusView(isStartPassengerMode: $isStartPassengerMode).navigationBarBackButtonHidden(), isActive: $isStartPassengerMode) {
               Text("Passenger Mode")
             }
           }
@@ -34,7 +35,7 @@ struct OnboardingView: View {
           Button {
             // 탑승자 모드
           } label: {
-            NavigationLink(destination: WaitingCallsList(isShowingCallList: $isShowingCallList), isActive: $isShowingCallList) {
+            NavigationLink(destination: WaitingCallsList(isShowingCallList: $isShowingCallList).navigationBarBackButtonHidden(), isActive: $isShowingCallList) {
               Text("Driver Mode")
             }
           }

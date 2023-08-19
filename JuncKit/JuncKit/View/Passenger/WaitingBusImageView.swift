@@ -10,6 +10,7 @@ import SwiftUI
 struct WaitingBusImageView: View {
   @Binding var waitingBusState: WaitingBusState
   @Binding var isShowingWaitingBusView: Bool
+  @Binding var isStartPassengerMode: Bool
   
   var body: some View {
     switch(waitingBusState) {
@@ -52,12 +53,25 @@ struct WaitingBusImageView: View {
         .padding(.bottom, 38)
 
       }
+    case .complete:
+      VStack(spacing: 0) {
+        Image("arrivedBus")
+          .padding(.bottom, 74)
+        Button {
+          isShowingWaitingBusView.toggle()
+          isStartPassengerMode.toggle()
+        } label: {
+          Text("Boarding complete")
+        }.buttonStyle(MainButtonStyle())
+          .padding(.bottom, 40)
+      }
+
     }
   }
 }
 
 struct WaitingBusImageView_Previews: PreviewProvider {
     static var previews: some View {
-      WaitingBusImageView(waitingBusState: .constant(.connecting), isShowingWaitingBusView: .constant(true))
+      WaitingBusImageView(waitingBusState: .constant(.complete), isShowingWaitingBusView: .constant(true), isStartPassengerMode: .constant(true))
     }
 }

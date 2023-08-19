@@ -14,9 +14,12 @@ struct MyAnnotationItem: Identifiable {
 }
 
 struct CallBusView: View {
-  @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.1688, longitude: 129.1363), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
+  @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.1675, longitude: 129.1367), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
   @State var isShowingWaitingBusView = false
+  @State var isShowingCallBusModal = true
   @StateObject var locationManager = LocationManager()
+  
+  @Binding var isStartPassengerMode: Bool
   
   var annotationItems: [MyAnnotationItem] = [MyAnnotationItem(coordinate: CLLocationCoordinate2D(latitude: 35.1688, longitude: 129.1363))]
   
@@ -27,13 +30,21 @@ struct CallBusView: View {
                   Image("annotation")
         }
       })
-        .padding([.bottom], 310)
+      .ignoresSafeArea()
       VStack {
+        HStack {
+          Button {
+            isStartPassengerMode.toggle()
+          } label: {
+            Image("arrowBackButton")
+          }
+          Spacer()
+        }
+        .padding([.top, .leading], 24)
         Spacer()
-        ZStack {
-          RoundedRectangle(cornerRadius: 30)
-            .frame(height: 374)
-            .foregroundColor(.white)
+      }
+      .sheet(isPresented: $isShowingCallBusModal) {
+             HalfSheet {
           VStack(spacing: 0) {
             Image("pin")
               .padding(.bottom, 16)
@@ -44,45 +55,31 @@ struct CallBusView: View {
               .padding(.bottom, 28)
             Button {
               isShowingWaitingBusView.toggle()
+              isShowingCallBusModal.toggle()
               print(locationManager.lastKnownLocation?.coordinate.latitude)
             } label: {
               Text("Call Bus")
             }
             .buttonStyle(MainButtonStyle())
-            .padding([.bottom], 30)
+            .padding([.bottom], 40)
             .padding(.top, 36)
           }
         }
       }
-      .ignoresSafeArea()
       if isShowingWaitingBusView {
-        WaitingBusView(isShowingWaitingBusView: $isShowingWaitingBusView)
+        Color.white
+          .ignoresSafeArea()
+        WaitingBusView(isShowingWaitingBusView: $isShowingWaitingBusView, isStartPassengerMode: $isStartPassengerMode)
       }
     }
-    .onAppear {
-      locationManager.startUpdating()
+    .onDisappear {
+      isShowingCallBusModal.toggle()
     }
   }
 }
 
-extension CallBusView {
-//  private func postMyLocation () {
-//    AF.request("http://localhost:5000/test/post", method: .post, parameters: ["key": "hello!"], encoding: URLEncoding.httpBody).responseJSON() { response in
-//      switch response.result {
-//      case .success:
-//        if let data = try! response.result.get() as? [String: Any] {
-//          self.message = data["result"] as! String
-//        }
-//      case .failure(let error):
-//        print("Error: \(error)")
-//        return
-//      }
-//    }
-//  }
-}
-
 struct CallBusView_Previews: PreviewProvider {
   static var previews: some View {
-    CallBusView()
+    CallBusView(isStartPassengerMode: .constant(true))
   }
 }
