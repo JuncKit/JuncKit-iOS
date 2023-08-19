@@ -23,14 +23,16 @@ struct OnboardingView: View {
             // 탑승자 모드
           } label: {
             NavigationLink(destination: CallBusView()) {
-              Text("Passenger Mode") // TODO
+              Text("Passenger Mode")
             }
           }
           .buttonStyle(MainButtonStyle())
           Button {
             // 탑승자 모드
           } label: {
-            Text("Driver Mode") // TODO
+            NavigationLink(destination: WaitingCallsList()) {
+              Text("Driver Mode")
+            }
           }
           .buttonStyle(MainButtonStyle())
         }
