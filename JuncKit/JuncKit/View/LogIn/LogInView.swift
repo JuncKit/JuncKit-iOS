@@ -14,7 +14,7 @@ struct LogInView: View {
     ZStack {
       AppleSigninButton(isSuccessLogIn: $isSuccessLogIn)
       if (isSuccessLogIn) {
-        ContentView()
+        ShopListView()
       }
     }
     .frame(height:UIScreen.main.bounds.height)
