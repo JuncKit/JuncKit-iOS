@@ -11,9 +11,11 @@ struct OnboardingView: View {
   var body: some View {
     NavigationView {
       VStack {
+        
+        Image("JunckitBus")
         Text("Select a button")
-          .font(.system(size: 24))
-          .foregroundColor(.black.opacity(0.4))
+              .font(.system(size: 24))
+              .foregroundColor(.black.opacity(0.4))
         Image("image") // TODO
           .padding([.top], 77)
           .padding([.leading, .trailing], 44)
