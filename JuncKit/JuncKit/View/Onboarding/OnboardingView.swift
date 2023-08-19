@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    var body: some View {
+  var body: some View {
+    NavigationView {
       VStack {
         Image("image") // TODO
           .padding([.top], 77)
           .padding([.leading, .trailing], 44)
+        
         VStack(spacing: 28) {
           Button {
             // 탑승자 모드
           } label: {
-            Text("탑승자 모드") // TODO
+            NavigationLink(destination: CallBusView()) {
+              Text("탑승자 모드") // TODO
+            }
           }
           Button {
             // 탑승자 모드
@@ -28,10 +32,11 @@ struct OnboardingView: View {
         .padding([.bottom], 72)
       }
     }
+  }
 }
 
 struct OnboardingView_Previews: PreviewProvider {
-    static var previews: some View {
-        OnboardingView()
-    }
+  static var previews: some View {
+    OnboardingView()
+  }
 }

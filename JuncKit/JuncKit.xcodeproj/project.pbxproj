@@ -10,6 +10,8 @@
 		B8813D582A903213006EF570 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D572A903213006EF570 /* APIEnvironment.swift */; };
 		B8813D642A90AD4D006EF570 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8813D632A90AD4D006EF570 /* Launch Screen.storyboard */; };
 		B8813D672A90AD8E006EF570 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D662A90AD8E006EF570 /* OnboardingView.swift */; };
+		B8813D6A2A90AFA6006EF570 /* CallBusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D692A90AFA6006EF570 /* CallBusView.swift */; };
+		B8813D6D2A90B57D006EF570 /* SetTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D6C2A90B57D006EF570 /* SetTimeView.swift */; };
 		B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */; };
 		B8F9D9772A8FCA5C006A454F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9762A8FCA5C006A454F /* Assets.xcassets */; };
 		B8F9D97A2A8FCA5C006A454F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9792A8FCA5C006A454F /* Preview Assets.xcassets */; };
@@ -21,6 +23,8 @@
 		B8813D572A903213006EF570 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
 		B8813D632A90AD4D006EF570 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B8813D662A90AD8E006EF570 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		B8813D692A90AFA6006EF570 /* CallBusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallBusView.swift; sourceTree = "<group>"; };
+		B8813D6C2A90B57D006EF570 /* SetTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeView.swift; sourceTree = "<group>"; };
 		B8F9D96F2A8FCA5A006A454F /* JuncKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuncKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuncKitApp.swift; sourceTree = "<group>"; };
 		B8F9D9762A8FCA5C006A454F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +64,22 @@
 				B8813D662A90AD8E006EF570 /* OnboardingView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		B8813D682A90AF59006EF570 /* Passenger */ = {
+			isa = PBXGroup;
+			children = (
+				B8813D692A90AFA6006EF570 /* CallBusView.swift */,
+			);
+			path = Passenger;
+			sourceTree = "<group>";
+		};
+		B8813D6B2A90B54D006EF570 /* BusDriver */ = {
+			isa = PBXGroup;
+			children = (
+				B8813D6C2A90B57D006EF570 /* SetTimeView.swift */,
+			);
+			path = BusDriver;
 			sourceTree = "<group>";
 		};
 		B8F9D9662A8FCA5A006A454F = {
@@ -104,6 +124,8 @@
 		B8F9D9802A8FCB54006A454F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B8813D6B2A90B54D006EF570 /* BusDriver */,
+				B8813D682A90AF59006EF570 /* Passenger */,
 				B8813D652A90AD5F006EF570 /* Onboarding */,
 			);
 			path = View;
@@ -201,7 +223,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8813D672A90AD8E006EF570 /* OnboardingView.swift in Sources */,
+				B8813D6A2A90AFA6006EF570 /* CallBusView.swift in Sources */,
 				B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */,
+				B8813D6D2A90B57D006EF570 /* SetTimeView.swift in Sources */,
 				B8813D582A903213006EF570 /* APIEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
