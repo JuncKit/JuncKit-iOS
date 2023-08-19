@@ -15,6 +15,17 @@ struct WaitingBusView: View {
   var body: some View {
     ZStack {
       Color.white
+      switch(waitingBusState) {
+      case .connecting:
+        VStack {
+          Spacer()
+          Image("connectingBkg")
+        }
+      case .success:
+        Image("JunckitBus")
+      default:
+        Color.white
+      }
       VStack(spacing: 0) {
         HStack {
           WaitingBusTextView(waitingBusState: $waitingBusState, min: $min)

@@ -31,7 +31,9 @@ struct WaitingBusImageView: View {
           .font(.system(size: 24))
           .foregroundColor(.black.opacity(0.4))
           .multilineTextAlignment(.center)
-          .padding(.bottom, 24)
+          .padding(.bottom, 14)
+        Image("failureBus")
+          .padding(.bottom, 33)
         Button {
           waitingBusState = .connecting
         } label: {
@@ -47,6 +49,7 @@ struct WaitingBusImageView: View {
             .foregroundColor(.black.opacity(0.4))
             .underline()
         }
+        .padding(.bottom, 38)
 
       }
     }

@@ -35,10 +35,13 @@ struct CallBusView: View {
             .frame(height: 374)
             .foregroundColor(.white)
           VStack(spacing: 0) {
+            Image("pin")
+              .padding(.bottom, 16)
+              .padding(.top, 39)
             Text("You Are Right Here")
               .font(.system(size: 24))
               .foregroundColor(.black.opacity(0.4))
-              .padding(.top, 163)
+              .padding(.bottom, 28)
             Button {
               isShowingWaitingBusView.toggle()
               print(locationManager.lastKnownLocation?.coordinate.latitude)
