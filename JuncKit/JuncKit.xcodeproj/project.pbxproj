@@ -11,12 +11,12 @@
 		B8813D642A90AD4D006EF570 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8813D632A90AD4D006EF570 /* Launch Screen.storyboard */; };
 		B8813D672A90AD8E006EF570 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D662A90AD8E006EF570 /* OnboardingView.swift */; };
 		B8813D6A2A90AFA6006EF570 /* CallBusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D692A90AFA6006EF570 /* CallBusView.swift */; };
-		B8813D6D2A90B57D006EF570 /* SetTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D6C2A90B57D006EF570 /* SetTimeView.swift */; };
 		B8813D6F2A90B8C4006EF570 /* WaitingBusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D6E2A90B8C4006EF570 /* WaitingBusView.swift */; };
 		B8813D712A90B93B006EF570 /* WaitingBusTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D702A90B93B006EF570 /* WaitingBusTextView.swift */; };
 		B8813D732A90BDBB006EF570 /* WaitingBusImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D722A90BDBB006EF570 /* WaitingBusImageView.swift */; };
 		B8813D752A90BF05006EF570 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D742A90BF05006EF570 /* ButtonComponent.swift */; };
 		B8813D772A90C036006EF570 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D762A90C036006EF570 /* Color+Extension.swift */; };
+		B8813D792A90E579006EF570 /* WaitingCallsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D782A90E579006EF570 /* WaitingCallsList.swift */; };
 		B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */; };
 		B8F9D9772A8FCA5C006A454F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9762A8FCA5C006A454F /* Assets.xcassets */; };
 		B8F9D97A2A8FCA5C006A454F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9792A8FCA5C006A454F /* Preview Assets.xcassets */; };
@@ -29,12 +29,12 @@
 		B8813D632A90AD4D006EF570 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B8813D662A90AD8E006EF570 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		B8813D692A90AFA6006EF570 /* CallBusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallBusView.swift; sourceTree = "<group>"; };
-		B8813D6C2A90B57D006EF570 /* SetTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeView.swift; sourceTree = "<group>"; };
 		B8813D6E2A90B8C4006EF570 /* WaitingBusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingBusView.swift; sourceTree = "<group>"; };
 		B8813D702A90B93B006EF570 /* WaitingBusTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingBusTextView.swift; sourceTree = "<group>"; };
 		B8813D722A90BDBB006EF570 /* WaitingBusImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingBusImageView.swift; sourceTree = "<group>"; };
 		B8813D742A90BF05006EF570 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		B8813D762A90C036006EF570 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		B8813D782A90E579006EF570 /* WaitingCallsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingCallsList.swift; sourceTree = "<group>"; };
 		B8F9D96F2A8FCA5A006A454F /* JuncKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuncKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuncKitApp.swift; sourceTree = "<group>"; };
 		B8F9D9762A8FCA5C006A454F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		B8813D6B2A90B54D006EF570 /* BusDriver */ = {
 			isa = PBXGroup;
 			children = (
-				B8813D6C2A90B57D006EF570 /* SetTimeView.swift */,
+				B8813D782A90E579006EF570 /* WaitingCallsList.swift */,
 			);
 			path = BusDriver;
 			sourceTree = "<group>";
@@ -242,11 +242,11 @@
 				B8813D6A2A90AFA6006EF570 /* CallBusView.swift in Sources */,
 				B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */,
 				B8813D6F2A90B8C4006EF570 /* WaitingBusView.swift in Sources */,
-				B8813D6D2A90B57D006EF570 /* SetTimeView.swift in Sources */,
 				B8813D582A903213006EF570 /* APIEnvironment.swift in Sources */,
 				B8813D712A90B93B006EF570 /* WaitingBusTextView.swift in Sources */,
 				B8813D752A90BF05006EF570 /* ButtonComponent.swift in Sources */,
 				B8813D732A90BDBB006EF570 /* WaitingBusImageView.swift in Sources */,
+				B8813D792A90E579006EF570 /* WaitingCallsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
