@@ -13,11 +13,9 @@ struct ShopListView: View {
   
   var body: some View {
     ZStack {
-      Color.red
       Text("\(message)")
         .foregroundColor(.green)
     }
-    .ignoresSafeArea()
     .task { // .task? .onAppear?
       getShopList()
     }

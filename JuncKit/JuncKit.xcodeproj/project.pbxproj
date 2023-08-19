@@ -12,6 +12,7 @@
 		B8813D542A900910006EF570 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B8813D532A900910006EF570 /* Alamofire */; };
 		B8813D582A903213006EF570 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D572A903213006EF570 /* APIEnvironment.swift */; };
 		B8813D5D2A90417C006EF570 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D5C2A90417C006EF570 /* HomeTabView.swift */; };
+		B8813D602A904B35006EF570 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D5F2A904B35006EF570 /* IntroView.swift */; };
 		B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */; };
 		B8F9D9752A8FCA5A006A454F /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9D9742A8FCA5A006A454F /* LogInView.swift */; };
 		B8F9D9772A8FCA5C006A454F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9762A8FCA5C006A454F /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		B8813D552A903182006EF570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B8813D572A903213006EF570 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
 		B8813D5C2A90417C006EF570 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		B8813D5F2A904B35006EF570 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		B8F9D96F2A8FCA5A006A454F /* JuncKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuncKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuncKitApp.swift; sourceTree = "<group>"; };
 		B8F9D9742A8FCA5A006A454F /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		B8813D5E2A904B2B006EF570 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				B8813D5F2A904B35006EF570 /* IntroView.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
 		B8F9D9662A8FCA5A006A454F = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 		B8F9D9802A8FCB54006A454F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B8813D5E2A904B2B006EF570 /* Intro */,
 				B8813D592A904164006EF570 /* Home */,
 				B8813D4B2A8FFA17006EF570 /* LogIn */,
 			);
@@ -217,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8813D602A904B35006EF570 /* IntroView.swift in Sources */,
 				B8F9D9752A8FCA5A006A454F /* LogInView.swift in Sources */,
 				B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */,
 				B8813D582A903213006EF570 /* APIEnvironment.swift in Sources */,

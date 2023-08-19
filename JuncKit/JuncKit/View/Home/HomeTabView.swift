@@ -9,18 +9,27 @@ import SwiftUI
 
 struct HomeTabView: View {
   init() {
-    UITabBar.appearance().backgroundColor = UIColor.white
+    UITabBar.appearance().backgroundColor = .white
   }
   
   var body: some View {
     TabView() {
       ShopListView()
-        .tabItem { /*@START_MENU_TOKEN@*/Text("Tab Label 1")/*@END_MENU_TOKEN@*/ }
+        .tabItem { VStack {
+          Image(systemName: "birthday.cake.fill")
+          Text("매장/디자인")
+        }}
       Text("Tab Content 2")
-        .tabItem { /*@START_MENU_TOKEN@*/Text("Tab Label 2")/*@END_MENU_TOKEN@*/ }
+        .tabItem { VStack {
+          Image(systemName: "list.bullet.clipboard.fill")
+          Text("주문제작 현황")
+        } }
       Text("Tab Content 2")
-        .tabItem { /*@START_MENU_TOKEN@*/Text("Tab Label 2")/*@END_MENU_TOKEN@*/ }
-    }
+        .tabItem { VStack {
+          Image(systemName: "person.fill")
+          Text("나의 주문기록")
+        }  }
+    }.tint(.black)
   }
 }
 
