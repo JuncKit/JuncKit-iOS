@@ -21,23 +21,24 @@ struct WaitingBusTextView: View {
     switch(waitingBusState) {
     case .connecting:
       VStack(alignment: .leading, spacing: 0) {
-        Text("버스기사님을\n연결하고 있어요")
-          .font(.system(size: 40))
+        Text("Connecting\nto a driver ...")
+          .font(.system(size: 36, weight: .semibold))
           .padding(.bottom, 22)
-        Text("잠시만 기다려주세요")
+        Text("Wait for a minute, please")
           .font(.system(size: 24))
+          .foregroundColor(.black.opacity(0.4))
+      }
+      .onAppear {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+          waitingBusState = .success
+        }
       }
     case .success:
-      Text("\(min)분 뒤\n버스기사님이\n도착하신대요")
-        .font(.system(size: 40))
+      Text("The driver's\ngoing to arrive in\n\(min)mins.")
+        .font(.system(size: 36, weight: .semibold))
     case .failure:
-      Text("응답하신\n버스기사님이\n없어요")
-        .font(.system(size: 40))
-        .onAppear {
-          DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            waitingBusState = .success
-          }
-        }
+      Text("There's no\navailable driver\nright now")
+        .font(.system(size: 36, weight: .semibold))
     }
   }
 }

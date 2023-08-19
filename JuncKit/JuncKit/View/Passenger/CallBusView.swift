@@ -23,23 +23,24 @@ struct CallBusView: View {
             .frame(height: 374)
             .foregroundColor(.white)
           VStack(spacing: 0) {
-            Text("현재\n계신 곳이에요")
-              .font(.system(size: 40))
-              .multilineTextAlignment(.center)
+            Text("You Are Right Here")
+              .font(.system(size: 24))
+              .foregroundColor(.black.opacity(0.4))
+              .padding(.top, 163)
             Button {
               isShowingWaitingBusView.toggle()
             } label: {
-              Text("버스 부르기")
+              Text("Call Bus")
             }
             .buttonStyle(MainButtonStyle())
             .padding([.bottom], 30)
-            .padding(.top, 47)
+            .padding(.top, 36)
           }
         }
       }
       .ignoresSafeArea()
       if isShowingWaitingBusView {
-        WaitingBusView()
+        WaitingBusView(isShowingWaitingBusView: $isShowingWaitingBusView)
       }
     }
   }

@@ -10,6 +10,7 @@ import SwiftUI
 struct WaitingBusView: View {
   @State var waitingBusState: WaitingBusState = .connecting
   @State var min = 3
+  @Binding var isShowingWaitingBusView: Bool
 
   var body: some View {
     ZStack {
@@ -21,20 +22,15 @@ struct WaitingBusView: View {
           Spacer()
         }
         Spacer()
-        WaitingBusImageView(waitingBusState: $waitingBusState)
+        WaitingBusImageView(waitingBusState: $waitingBusState, isShowingWaitingBusView: $isShowingWaitingBusView)
       }
       .padding([.leading, .trailing], 24)
-    }
-    .onAppear {
-      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-        waitingBusState = .failure
-      }
     }
   }
 }
 
 struct WaitingBusView_Previews: PreviewProvider {
   static var previews: some View {
-    WaitingBusView()
+    WaitingBusView(isShowingWaitingBusView: .constant(true))
   }
 }
