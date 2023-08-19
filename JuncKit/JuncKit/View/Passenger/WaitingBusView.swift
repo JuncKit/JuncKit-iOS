@@ -18,9 +18,14 @@ struct WaitingBusView: View {
       Color.white
       switch(waitingBusState) {
       case .connecting:
-        VStack {
-          Spacer()
-          Image("connectingBkg")
+        ZStack {
+          VStack {
+            Spacer()
+            Image("connectingBkg")
+          }
+          LottieView(jsonName: "LoadingAnimation")
+            .frame(width: 190)
+            .padding(.top, 15)
         }
       case .success:
         LottieView(jsonName: "Bus")

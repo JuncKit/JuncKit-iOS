@@ -30,7 +30,7 @@ struct WaitingBusTextView: View {
           .foregroundColor(.black.opacity(0.4))
       }
       .onAppear {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
           waitingBusState = .success
         }
       }
@@ -38,7 +38,7 @@ struct WaitingBusTextView: View {
       Text("The driver's\ngoing to arrive in\n\(min)mins.")
         .font(.system(size: 36, weight: .semibold))
         .onAppear {
-          DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+          DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
             waitingBusState = .complete
           }
         }
