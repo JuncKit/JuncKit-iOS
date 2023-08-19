@@ -24,31 +24,30 @@ struct GetCallView: View {
             .font(.system(size: 36, weight: .semibold))
             .padding(.top, 56)
             .padding(.bottom, 78)
-            .padding(.leading, 24)
           Spacer()
         }
         ZStack {
           Image("callFrame")
           VStack {
-              HStack(spacing: 12) {
-                  Text("\(distance)km")
-                      .font(.system(size: 24))
-                      .foregroundColor(.green.opacity(0.6))
-                      .padding(8.0)
-                      .background(
-                          RoundedRectangle(cornerRadius: 20)
-                              .stroke(Color.green, lineWidth: 2)
-                      )
-
-                  Text("\(min)mins")
-                      .font(.system(size: 24))
-                      .foregroundColor(.green.opacity(0.6))
-                      .padding(8.0)
-                      .background(
-                          RoundedRectangle(cornerRadius: 20)
-                              .stroke(Color.green, lineWidth: 2)
-                      )
-              }.padding(.bottom, 36)
+            HStack(spacing: 12) {
+              Text("\(distance)km")
+                .font(.system(size: 24))
+                .foregroundColor(.green.opacity(0.6))
+                .padding(8.0)
+                .background(
+                  RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.green, lineWidth: 2)
+                )
+              
+              Text("\(min)mins")
+                .font(.system(size: 24))
+                .foregroundColor(.green.opacity(0.6))
+                .padding(8.0)
+                .background(
+                  RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.green, lineWidth: 2)
+                )
+            }.padding(.bottom, 36)
             Text("\(address)")
               .font(.system(size: 32))
               .multilineTextAlignment(.center)
@@ -60,6 +59,7 @@ struct GetCallView: View {
           
         } label: {
           Text("Get the call")
+            .font(.system(size: 28, weight: .semibold))
         }
         .buttonStyle(MainButtonStyle())
         .padding(.bottom, 24)
@@ -79,7 +79,7 @@ struct GetCallView: View {
 }
 
 struct GetCallView_Previews: PreviewProvider {
-    static var previews: some View {
-      GetCallView(isShowingGetCallView: .constant(true))
-    }
+  static var previews: some View {
+    GetCallView(isShowingGetCallView: .constant(true))
+  }
 }

@@ -65,6 +65,7 @@ struct WaitingCallsList: View {
         .padding([.leading, .trailing], 24)
         if (isShowingWaitingCallView) {
           WaitingCallView(isShowingWaitingCallView: $isShowingWaitingCallView)
+            .padding([.leading], 24)
         }
       }
     }
