@@ -22,6 +22,7 @@
 		B8813D7D2A90E820006EF570 /* GetCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D7C2A90E820006EF570 /* GetCallView.swift */; };
 		B8813D7F2A90ED9B006EF570 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D7E2A90ED9B006EF570 /* WebSocket.swift */; };
 		B8813D822A90F86D006EF570 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8813D812A90F86D006EF570 /* Client.swift */; };
+		B8A0EAC12A9114CF0011479A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0EAC02A9114CF0011479A /* LocationManager.swift */; };
 		B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */; };
 		B8F9D9772A8FCA5C006A454F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9762A8FCA5C006A454F /* Assets.xcassets */; };
 		B8F9D97A2A8FCA5C006A454F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9792A8FCA5C006A454F /* Preview Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		B8813D7C2A90E820006EF570 /* GetCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCallView.swift; sourceTree = "<group>"; };
 		B8813D7E2A90ED9B006EF570 /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		B8813D812A90F86D006EF570 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		B8A0EAC02A9114CF0011479A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B8F9D96F2A8FCA5A006A454F /* JuncKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuncKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuncKitApp.swift; sourceTree = "<group>"; };
 		B8F9D9762A8FCA5C006A454F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +141,14 @@
 			path = Stomp;
 			sourceTree = "<group>";
 		};
+		B8A0EABF2A9114C40011479A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B8A0EAC02A9114CF0011479A /* LocationManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		B8F9D9662A8FCA5A006A454F = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +170,7 @@
 		B8F9D9712A8FCA5A006A454F /* JuncKit */ = {
 			isa = PBXGroup;
 			children = (
+				B8A0EABF2A9114C40011479A /* Utils */,
 				B8813D562A9031FE006EF570 /* Extensions */,
 				B8813D552A903182006EF570 /* Info.plist */,
 				B8813D512A9005F8006EF570 /* Model */,
@@ -323,6 +334,7 @@
 			files = (
 				B8813D672A90AD8E006EF570 /* OnboardingView.swift in Sources */,
 				B8813D772A90C036006EF570 /* Color+Extension.swift in Sources */,
+				B8A0EAC12A9114CF0011479A /* LocationManager.swift in Sources */,
 				B8813D6A2A90AFA6006EF570 /* CallBusView.swift in Sources */,
 				B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */,
 				B8813D7B2A90E6AE006EF570 /* WaitingCallView.swift in Sources */,

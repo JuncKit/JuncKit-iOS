@@ -46,6 +46,7 @@
 		AC3833C7ADB9F65FED4E9205B00CEA05 /* SRURLUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CFB9CD7273F3F7F2732C0D213885E30 /* SRURLUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B1F5EA3D6418135C311F753999815C93 /* SRConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D21A0041E6FA0123A5C053161D691D /* SRConstants.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B826D5B6F481D744CA0A9292BB8D6A63 /* SRRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB20B6AB7960FA6C043A4BAC6D07E43 /* SRRandom.m */; };
+		B8A0EABE2A9112640011479A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B8A0EABD2A9112640011479A /* Alamofire */; };
 		BAB26EA0AFE983A65E38B5AE07494C89 /* SRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF011CB91CFE34559B9D9E0821515C0 /* SRConstants.m */; };
 		BB67DCB5183951BF184CE16A337601C3 /* NSRunLoop+SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 27366BC0F2293FF2F5FBAF3AA38B7125 /* NSRunLoop+SRWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2AF277F715467B70DA6900B0066D5F1 /* SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 3582DD0412F20164BADE17B610648917 /* SRWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -131,7 +132,7 @@
 		95596015C7B28E941024E91D5EEE4809 /* SRPinningSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRPinningSecurityPolicy.m; path = SocketRocket/Internal/Security/SRPinningSecurityPolicy.m; sourceTree = "<group>"; };
 		9675BAFBC2653F686E536DE8AB7B9F73 /* SRHash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRHash.h; path = SocketRocket/Internal/Utilities/SRHash.h; sourceTree = "<group>"; };
 		9CFB9CD7273F3F7F2732C0D213885E30 /* SRURLUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRURLUtilities.h; path = SocketRocket/Internal/Utilities/SRURLUtilities.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A6BE90665B4A1053C5FF26D5289CBC83 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		A818250AF635A0738081C432A319AFB5 /* SocketRocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SocketRocket.debug.xcconfig; sourceTree = "<group>"; };
 		AAB987CCDB58839BE53B0ADB4D4E152F /* SRLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRLog.m; path = SocketRocket/Internal/Utilities/SRLog.m; sourceTree = "<group>"; };
@@ -167,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				294A189C35B041816B187D818022E93A /* Foundation.framework in Frameworks */,
+				B8A0EABE2A9112640011479A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +239,6 @@
 				5FA3DE23C0F5C9F5259207AAECD1A9F9 /* StompClientLib.swift */,
 				5AEAE29C70C072716C9B2668F3835C78 /* Support Files */,
 			);
-			name = StompClientLib;
 			path = StompClientLib;
 			sourceTree = "<group>";
 		};
@@ -310,7 +311,6 @@
 				8E67DD929E9978F217777DA88A09227F /* SRWebSocket.m */,
 				85F7A8C90A42419A650F035D03FE3E22 /* Support Files */,
 			);
-			name = SocketRocket;
 			path = SocketRocket;
 			sourceTree = "<group>";
 		};
@@ -459,6 +459,9 @@
 				E1942A23C10CAA4723A3FC680D549044 /* PBXTargetDependency */,
 			);
 			name = "Pods-JuncKit";
+			packageProductDependencies = (
+				B8A0EABD2A9112640011479A /* Alamofire */,
+			);
 			productName = Pods_JuncKit;
 			productReference = 7CCC68ACB1B82F935B0DEC3BCC8CC46F /* Pods-JuncKit */;
 			productType = "com.apple.product-type.framework";
@@ -481,6 +484,9 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			packageReferences = (
+				B8A0EABC2A9112640011479A /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = C401C8CFAD90FA2B4DA337B1E458851E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -968,6 +974,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B8A0EABC2A9112640011479A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B8A0EABD2A9112640011479A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8A0EABC2A9112640011479A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

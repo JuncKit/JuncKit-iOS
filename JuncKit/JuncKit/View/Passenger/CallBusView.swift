@@ -8,13 +8,25 @@
 import SwiftUI
 import MapKit
 
+struct MyAnnotationItem: Identifiable {
+    var coordinate: CLLocationCoordinate2D
+    let id = UUID()
+}
+
 struct CallBusView: View {
-  @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.5666791, longitude: 126.9782914), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+  @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.1688, longitude: 129.1363), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
   @State var isShowingWaitingBusView = false
+  @StateObject var locationManager = LocationManager()
+  
+  var annotationItems: [MyAnnotationItem] = [MyAnnotationItem(coordinate: CLLocationCoordinate2D(latitude: 35.1688, longitude: 129.1363))]
   
   var body: some View {
     ZStack {
-      Map(coordinateRegion: $region, interactionModes: [.zoom], showsUserLocation: true, userTrackingMode: .constant(.follow))
+      Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: annotationItems, annotationContent: { item in
+        MapAnnotation(coordinate: item.coordinate) {
+                  Image("annotation")
+        }
+      })
         .padding([.bottom], 310)
       VStack {
         Spacer()
@@ -29,6 +41,7 @@ struct CallBusView: View {
               .padding(.top, 163)
             Button {
               isShowingWaitingBusView.toggle()
+              print(locationManager.lastKnownLocation?.coordinate.latitude)
             } label: {
               Text("Call Bus")
             }
@@ -43,7 +56,26 @@ struct CallBusView: View {
         WaitingBusView(isShowingWaitingBusView: $isShowingWaitingBusView)
       }
     }
+    .onAppear {
+      locationManager.startUpdating()
+    }
   }
+}
+
+extension CallBusView {
+//  private func postMyLocation () {
+//    AF.request("http://localhost:5000/test/post", method: .post, parameters: ["key": "hello!"], encoding: URLEncoding.httpBody).responseJSON() { response in
+//      switch response.result {
+//      case .success:
+//        if let data = try! response.result.get() as? [String: Any] {
+//          self.message = data["result"] as! String
+//        }
+//      case .failure(let error):
+//        print("Error: \(error)")
+//        return
+//      }
+//    }
+//  }
 }
 
 struct CallBusView_Previews: PreviewProvider {
