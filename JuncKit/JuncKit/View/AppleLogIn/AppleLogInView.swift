@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LogInView: View {
+struct AppleLogInView: View {
   @State var isSuccessLogIn = false
   
   var body: some View {
@@ -25,6 +25,6 @@ struct LogInView: View {
 
 struct LogInView_Previews: PreviewProvider {
   static var previews: some View {
-    LogInView()
+    AppleLogInView()
   }
 }
