@@ -27,7 +27,7 @@ struct WaitingBusView: View {
     }
     .onAppear {
       DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-        waitingBusState = .success
+        waitingBusState = .failure
       }
     }
   }

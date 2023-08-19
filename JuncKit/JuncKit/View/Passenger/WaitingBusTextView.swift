@@ -33,6 +33,11 @@ struct WaitingBusTextView: View {
     case .failure:
       Text("응답하신\n버스기사님이\n없어요")
         .font(.system(size: 40))
+        .onAppear {
+          DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            waitingBusState = .success
+          }
+        }
     }
   }
 }

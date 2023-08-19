@@ -11,6 +11,9 @@ struct OnboardingView: View {
   var body: some View {
     NavigationView {
       VStack {
+        Text("Select a button")
+          .font(.system(size: 24))
+          .foregroundColor(.black.opacity(0.4))
         Image("image") // TODO
           .padding([.top], 77)
           .padding([.leading, .trailing], 44)
@@ -20,14 +23,16 @@ struct OnboardingView: View {
             // 탑승자 모드
           } label: {
             NavigationLink(destination: CallBusView()) {
-              Text("탑승자 모드") // TODO
+              Text("Passenger Mode") // TODO
             }
           }
+          .buttonStyle(MainButtonStyle())
           Button {
             // 탑승자 모드
           } label: {
-            Text("운전자 모드") // TODO
+            Text("Driver Mode") // TODO
           }
+          .buttonStyle(MainButtonStyle())
         }
         .padding([.bottom], 72)
       }

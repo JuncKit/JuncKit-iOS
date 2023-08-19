@@ -20,7 +20,16 @@ struct WaitingBusImageView: View {
         .padding(.bottom, 97)
     case .failure:
       VStack(spacing: 0) {
-        
+        Text("Could you please call the\ndriver again?")
+          .font(.system(size: 24))
+          .foregroundColor(.black.opacity(0.4))
+          .multilineTextAlignment(.center)
+        Button {
+          waitingBusState = .connecting
+        } label: {
+          Text("다시 부르기")
+        }
+        .buttonStyle(MainButtonStyle())
       }
     }
   }
@@ -28,6 +37,6 @@ struct WaitingBusImageView: View {
 
 struct WaitingBusImageView_Previews: PreviewProvider {
     static var previews: some View {
-      WaitingBusImageView(waitingBusState: .constant(.connecting))
+      WaitingBusImageView(waitingBusState: .constant(.failure))
     }
 }
