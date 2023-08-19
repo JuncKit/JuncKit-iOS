@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GetCallView: View {
-  @State var userName = "Username"
+  @State var callstate = "Pending Call"
   @State var distance = 5
   @State var min = 3
   @State var address = "Busan\nMetropolitan City,\nGijang County"
@@ -19,17 +19,33 @@ struct GetCallView: View {
     ZStack {
       Color.white
       VStack(spacing: 0) {
-        Text("\(userName)")
-          .font(.system(size: 32))
+        Text("\(callstate)")
+          .font(.system(size: 36))
+          .multilineTextAlignment(.leading)
           .padding(.top, 97)
           .padding(.bottom, 24)
         ZStack {
           Image("callFrame")
           VStack {
-            Text("\(distance)kmㆍ\(min)mins")
-              .padding(.bottom, 36)
-              .font(.system(size: 32))
-              .foregroundColor(.black.opacity(0.6))
+              HStack(spacing: 12) {
+                  Text("\(distance)km")
+                      .font(.system(size: 24))
+                      .foregroundColor(.green.opacity(0.6))
+                      .padding(8.0)
+                      .background(
+                          RoundedRectangle(cornerRadius: 25)
+                              .stroke(Color.green, lineWidth: 2)
+                      )
+
+                  Text("\(min)mins")
+                      .font(.system(size: 24))
+                      .foregroundColor(.green.opacity(0.6))
+                      .padding(8.0)
+                      .background(
+                          RoundedRectangle(cornerRadius: 25)
+                              .stroke(Color.green, lineWidth: 2)
+                      )
+              }.padding(.bottom, 36)
             Text("\(address)")
               .font(.system(size: 32))
               .multilineTextAlignment(.center)

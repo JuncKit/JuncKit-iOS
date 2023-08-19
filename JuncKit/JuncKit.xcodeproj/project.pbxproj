@@ -26,6 +26,7 @@
 		B8F9D9732A8FCA5A006A454F /* JuncKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9D9722A8FCA5A006A454F /* JuncKitApp.swift */; };
 		B8F9D9772A8FCA5C006A454F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9762A8FCA5C006A454F /* Assets.xcassets */; };
 		B8F9D97A2A8FCA5C006A454F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9D9792A8FCA5C006A454F /* Preview Assets.xcassets */; };
+		C578B4BFF0F8E1ADCFF41CD3 /* Pods_JuncKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA2CD62CEAA514D42F67F5 /* Pods_JuncKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
