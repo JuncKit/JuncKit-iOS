@@ -20,6 +20,8 @@ class StompManager: StompClientLibDelegate, ObservableObject {
   
   // Socket Connection URL
   private lazy var url = URL(string: "ws://52.78.148.42:8080/chat/room/\(roomId)/websocket")!
+  let intervalSec = 1.0
+  public var soketClient = StompClientLib()
   
   var roomId = "fc07da6d-6183-4ef5-a3a6-2bc8c708347e"
   var room: [String: Any] = [:]
