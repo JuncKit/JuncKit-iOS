@@ -31,7 +31,7 @@ struct WaitingBusTextView: View {
       }
       .onAppear {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-          waitingBusState = .success
+          waitingBusState = .failure
         }
       }
     case .success:
@@ -45,6 +45,7 @@ struct WaitingBusTextView: View {
     case .failure:
       Text("There's no\navailable driver\nright now")
         .font(.system(size: 36, weight: .semibold))
+        .padding(.leading, 24)
     case .complete:
       Text("The driver\nhas arrived!")
         .font(.system(size: 36, weight: .semibold))
