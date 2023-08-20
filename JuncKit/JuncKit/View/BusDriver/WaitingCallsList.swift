@@ -43,27 +43,31 @@ struct WaitingCallsList: View {
                       .padding(.trailing, 46)
                     Image("rightGreenButton")
                   }
-                  .padding(.bottom, 32)
+                  .padding(.bottom, 20)
                 }.tint(.black)
               }
             }
-            .padding(.bottom, 100)
+//            .padding(.bottom, 10)
             VStack {
               Spacer()
               Image("opacityRectangle")
+                .resizable()
+                .frame(height:144)
                 .ignoresSafeArea()
             }
-          }
-          HStack {
-            Button {
-              isShowingCallList.toggle()
-              
-            } label: {
-              Image("backButton")
+            VStack {
+              Spacer()
+              HStack {
+                Button {
+                  isShowingCallList.toggle()
+                } label: {
+                  Image("backButton")
+                }
+                .padding(.bottom, 40)
+                .padding(.leading, 24)
+                Spacer()
+              }
             }
-            .padding(.bottom, 40)
-            .padding(.leading, 24)
-            Spacer()
           }
         }
         if (isShowingWaitingCallView) {
