@@ -11,7 +11,7 @@ import SwiftUI
 struct JuncKitApp: App {
   var body: some Scene {
     WindowGroup {
-      OnboardingView()
+      TestView()
     }
   }
 }

@@ -14,7 +14,7 @@ struct GetCallView: View {
   @State var min = 3
   @State var centerName = "Hoeryong Village\nCommunity Center"
   @State var address = "8 Baesan-ro, Gijang-gun,\nBusan Metropolitan City"
-  @State var isShowingDestinationInfoView = false
+  @State var isShowingCallButton = true
   @State var isShowingHalfSheet = true
   
   @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.2335, longitude: 129.1600), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
@@ -44,9 +44,6 @@ struct GetCallView: View {
         }
         .padding([.leading], 24)
         Spacer()
-      }
-      if (isShowingDestinationInfoView) {
-        DestinationInfoView()
       }
     }
     .sheet(isPresented: $isShowingHalfSheet) {
@@ -84,18 +81,21 @@ struct GetCallView: View {
                .multilineTextAlignment(.center)
            }
            .padding(.bottom, 29)
+         
          Button {
-           isShowingDestinationInfoView.toggle()
-           isShowingHalfSheet.toggle()
+             isShowingCallButton.toggle()
+           //           isShowingHalfSheet.toggle()
          } label: {
            Text("Get the call")
              .font(.system(size: 28, weight: .semibold))
          }
+         .opacity(isShowingCallButton ? 1 : 0)
          .buttonStyle(MainButtonStyle())
          .padding(.bottom, 20)
+         
        }
     }
-
+    
   }
 }
 

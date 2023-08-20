@@ -10,6 +10,7 @@ import SwiftUI
 struct OnboardingView: View {
   @State var isShowingCallList = false
   @State var isStartPassengerMode = false
+  @State var isPresentCalls = true
   
   var body: some View {
     NavigationView {
